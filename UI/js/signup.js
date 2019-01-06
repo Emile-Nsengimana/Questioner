@@ -1,13 +1,13 @@
 function Queue(){
-		let users = [];
-		this.print = function(){
-			return users;			
-		};
-		this.enqueue = function(element){
-			users.push(element);
-		};
+	let users = [];
+	this.print = function(){
+		return users;			
+	};
+	this.enqueue = function(element){
+		users.push(element);
+	};
 		
-	}
+}
 let btnregister = document.getElementById('neza');
 let btnlst = document.getElementById('lst');
 let q = new Queue();
@@ -33,10 +33,10 @@ btnregister.addEventListener('click', function(){
 		phone:phone,
 		username:username,
 		password:password
-	}
+	};
 	
 	q.enqueue(user);
-	});
+});
 
 btnlst.addEventListener('click',function(){
 	console.log(q.print());

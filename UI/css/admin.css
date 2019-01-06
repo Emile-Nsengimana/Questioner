@@ -10,7 +10,6 @@ body{
 	width: 80%;
 	margin: auto;
 	overflow: hidden;
-
 }
 ul,h2{
 	margin: 0;
@@ -69,6 +68,7 @@ header a:hover{
 
 footer{
 	padding: 20px;
+	margin-bottom: 0;
 	margin-top: 20px;
 	color: #ffffff;
 	background-color: #cccccc;
@@ -124,4 +124,7 @@ label{
 	font-size: 8pt;
 	padding: 0;
 	margin: 0;
+}
+.box{
+	height: 400px;
 }
