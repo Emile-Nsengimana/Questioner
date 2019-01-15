@@ -16,69 +16,39 @@
 				<span class="stressthis"><h1>Questioner</h1></span>
 			</div>
 			<nav>
-			<ul>
-				<li><a href="admin.html">HOME</a></li>
-				<li class="active">
-					<ul>EVENTS
+					<ul>
+						<li><a href="admin.html">HOME</a></li>
 						<li><a class="active" href="#">ADD</a></li>
 						<li><a href="delete.html">DELETE</a></li>
-					</ul>
-				</li>				
-				
-				<li><a id="sin" href="signin.html">LOGOUT</a></li>		
-			</ul>
-			</nav>		
+						<li><a href="signin.html">LOGOUT</a></li>		
+					</ul>	
+				</nav>		
 		</div>
 	</header><br><br>
-		<section id="showcase">
+		<section>
 			<div id="create">
 				<span id="sp1">	
-					<label >Id:</label><br><input id="ev_id" type="number"></input><br>				
+								
 					<label >Location:</label><br><input id="location" type="text"><br>
-					<label >Topic:</label><br><input  id="topic" type="text"></input><br>
+					<label >Topic:</label><br><textarea  id="topic" ></textarea><br>
+					<label >Image:</label><br><input id="image" type="file"></input><br>
 				</span>
 				<span id="sp3">
-					<label >Image:</label><input id="image" type="file"><br>
+					
 					<label >Happening on:</label><br><input id="happens" type="Date"><br>					
-					<label >Tags:</label><br><input id="tag" type="text"><br>
+					<label >Tags:</label><br><textarea id="tag"></textarea><br>
 				</span>
 			<br><br>
-					<button id="btn">Create</button>
+					<button id="neza">Create</button>
 			
 			</div>
 		</section>
-	<script>
-		let ev_id = document.getElementById('ev_id').value;
-		let location = document.getElementById('location').value;
-		let topic = document.getElementById('topic').value;
-		let image = document.getElementById('image').value;
-		let happens = document.getElementById('happens').value;
-		let tag = document.getElementById('tag').value;
-		let btn = document.getElementById('btn');
-		let d = new Date();
-		let h = d.getHours();
-		let m = d.getMinutes();
-		let s = d.getSeconds();
-		let yyyy = d.getFullYear();
-		let mm = d.getMounth();
-		let dd = d.getDay();
-		let fd = `#{dd}:#{mm}:#{yyyy}`;
-		btn.addEventListener('click',()=>{
-			meetup:{
-				"Id":ev_id,
-				"createdOn":fd,
-				"location":location,
-				"topic":topic,
-				"happeningOn":happens,	
-				"tag":tag
-		location.href = "http://localhost:3000/api/v1/meetup";
-			}
-		})
-	</script>
+	
+
 </body>
 <footer>
 		<div>
 			<h3>Andela developer challenge, Copy right &copy; 2018</h3>
 		</div>
-	</footer>
+</footer>
 </html>

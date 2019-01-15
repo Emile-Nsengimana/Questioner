@@ -1,0 +1,155 @@
+/*=============== Global =====================*/
+body{
+	font: 15px/1.5, sans-serif;
+	padding: 0;
+	background-color: #f4f4f4;
+}
+
+ul,h2{
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	background:#35424a;
+	color: #ffffff;
+	padding-top: 30px;
+	min-height: 70px;
+	border-bottom: #e8491d 3px solid;
+}
+
+header a{
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+
+}
+
+
+header #logo{
+	float: left;
+
+}
+
+header #logo h1{
+	margin: 0;
+}
+
+header nav{
+	float: right;
+	margin-top: 10px;
+}
+
+header .stressthis, header .active{
+	color: #e8491d;
+	font-weight: bold;
+}
+
+header a:hover{
+	color: yellow;
+	font-weight: bold;
+}
+
+input{
+	padding-left: 50px;
+	height: 25px;
+	width: 200px;
+}
+
+footer{
+	padding: 5px;
+	color: #ffffff;
+	background-color: #cccccc;
+	text-align:center;
+    height: 10%;
+    width: 100%;
+	position: fixed;
+	bottom: 0%;
+}
+
+/*=============== Classes ================*/
+.container{
+	width: 80%;
+	margin: auto;
+    overflow: hidden;
+}
+
+#hm{
+    width: 80%;
+    height: 400px;
+	margin: auto;
+    overflow: hidden;
+   
+    margin-top: 20px;
+    
+}
+/*=============== Ids =====================*/
+#sin{
+	font-size: 8pt;
+	padding: 0;
+	margin: 0;
+}
+
+#showcase h1{
+	margin-top: 100px;
+	font-size: 55px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#showcase p{
+    font-size: 20px;
+    text-align: center;
+}
+ul li ul li{
+    display: none;
+    background-color:transparent;
+   
+}
+
+
+ul li:hover ul li{
+    color: yellow;
+    display: block;
+    height: 30px;
+    width: 70px;
+    padding: 3px 5px 3px 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 
+}
+
+ul li{
+    display: inline-block;
+	padding: 0 20px 0 20px;
+}
+
+table{
+	border: #435533 3px solid;
+    text-align: center;
+    width: 80%;
+    font-size: 22pt;
+
+}
+table tbody tr td{
+	border: #122334 3px solid;
+	text-align: center;
+	padding: 5px 5px 5px 0;
+    margin: auto;
+}
+#dlt{
+    height: 40px;
+	font-size: 12pt;
+	background-color: #122334;
+	color: #ffffff;
+	margin: 2px;
+    border-radius: 12px;
+    width: 120px;
+    font-size: 15pt;
+}
+#dlt:hover{
+    background-color: red;
+}
+thead{
+    font-weight: bold;
+    font-size: 13pt;
+}

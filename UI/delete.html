@@ -6,7 +6,7 @@
 	<meta name="author" content="NSENGIMANA Emile">
 	<title>Sign in</title>
 	
-	<link rel="stylesheet" type="text/css" href="./css/admin.css">
+	<link rel="stylesheet" type="text/css" href="./css/adminHome.css">
 </head>
 <body>
 	<header>
@@ -15,26 +15,22 @@
 				<span class="stressthis"><h1>Questioner</h1></span>
 			</div>
 			<nav>
-			<ul>
-				<li ><a href="admin.html">HOME</a></li>
-				<li class="active">
-					<ul>EVENTS
+					<ul>
+						<li><a href="admin.html">HOME</a></li>
 						<li><a href="add.html">ADD</a></li>
-						<li><a class="active" href="#">DELETE</a></li>
-					</ul>
-				</li>				
-				
-				<li><a id="sin" href="signin.html">LOGOUT</a></li>		
-			</ul>			
+						<li><a  class="active" href="delete.html">DELETE</a></li>
+						<li><a href="signin.html">LOGOUT</a></li>		
+					</ul>	
+				</nav>				
 		</div>
 	</header><br><br>
 		<section class="container">
 			<div class="box">
 				<table>
 				<thead>
-					<td>EVENT TITLE</td>
+					<td>TITLE</td>
 					<td>SUMMARY</td>
-					<td>SCHEDULEE DATE</td>
+					<td>HAPPENING ON</td>
 					<td>STATUS</td>
 					<td>ACTION</td>
 				</thead>
@@ -46,15 +42,35 @@
 						<td>ACTIVE</td>
 						<td><button id="dlt">Delete</button></td>
 					</tr>
-				</tbody>
+					<tr>
+							<td>Andela</td>
+							<td>Web development meetup ...</td>
+							<td>30-12-2018</td>
+							<td>ACTIVE</td>
+							<td><button id="dlt">Delete</button></td>
+						</tr>
+						<tr>
+								<td>FERWAFA</td>
+								<td>Web development meetup ...</td>
+								<td>30-12-2018</td>
+								<td>ACTIVE</td>
+								<td><button id="dlt">Delete</button></td>
+							</tr>
+							<tr>
+									<td>College of sciences an tech</td>
+									<td>Web development meetup ...</td>
+									<td>30-12-2018</td>
+									<td>ACTIVE</td>
+									<td><button id="dlt">Delete</button></td>
+								</tr>
+					
+							
 			</table>	
 			</div>			
 		</section>
 	
 </body>
 <footer>
-		<div>
-			<h3>Andela developer challenge, Copy right &copy; 2018</h3>
-		</div>
-	</footer>
+	<h3>Andela developer challenge, Copy right &copy; 2018</h3>
+</footer>
 </html>
