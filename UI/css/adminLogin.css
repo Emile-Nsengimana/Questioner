@@ -1,0 +1,118 @@
+
+
+section{
+    min-height: 317px;
+}
+/*=============== Global =====================*/
+body{
+	font: 15px/1.5, sans-serif;
+	padding: 0;
+	background-color: #f4f4f4;
+}
+
+header{
+	background:#35424a;
+	color: #ffffff;
+	padding-top: 30px;
+	min-height: 70px;
+	border-bottom: #e8491d 3px solid;
+}
+
+header #logo{
+	float: left;
+
+}
+header #logo h1{
+	margin: 0;
+}
+
+label{
+	width: 200px;
+	color: black;
+	font-weight: bold;
+	margin: 0;	
+}
+
+h5{
+	color: black;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;	
+}
+
+ul li:hover{
+	display: block;
+	color: yellow;
+}
+
+input{
+	padding-left: 50px;
+	height: 25px;
+	width: 200px;
+}
+
+footer{
+	padding: 5px;
+	color: #ffffff;
+	background-color: #cccccc;
+	text-align:center;
+    height: 10%;
+    margin-top: 40px;
+	position: relative;
+	
+}
+
+/*=============== Classes ================*/
+.container{
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+
+}
+.stressthis{
+	color: #e8491d;
+	font-weight: bold;
+}
+
+/*=============== Ids =====================*/
+
+#lg{
+	text-align: center;
+}
+
+#login{
+	width: 25%;	
+	margin: auto;
+	overflow: hidden;
+	background:white;
+	color: #ffffff;
+	padding: 20px 5px 0 115px;
+	height: 250px;
+	border: #e8491d 3px solid;
+
+}
+#neza{
+	width: 260px;
+	height: 38px;
+	background:darkgreen;
+	border: none;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: white;
+	font-weight: bold;
+	font-size: 17pt;
+}
+#neza:hover{
+	background-color:#122334;
+}
+#showcase h1{
+	margin-top: 100px;
+	font-size: 55px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#showcase p{
+	font-size: 20px;	
+}
+
