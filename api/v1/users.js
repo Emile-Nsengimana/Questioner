@@ -34,8 +34,8 @@ router.get('/', (req, res) => {
   });
 });
 
-router.get('/:topic', (req, res) => {
-  const usr = users.find(c => c.topic === req.params.topic);
+router.get('/:id', (req, res) => {
+  const usr = users.find(c => c.topic === parseInt(req.params.id, 10));
   if (usr) {
     res.status(200).json({
       status: 200,
