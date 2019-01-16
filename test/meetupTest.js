@@ -21,7 +21,7 @@ describe('Meetup endpoints test', () => {
     });
   });
   describe('A specif record should be returned based on the topic of the meetup', () => {
-    it('should get a single student record', () => {
+    it('a specific meetup record is returned', () => {
       const topic = 1;
       chai.request(app)
         .get(`/meetups/${topic}`);
