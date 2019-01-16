@@ -44,7 +44,7 @@ router.get('/:id', (req, res) => {
   } else {
     res.status(500).json({
       status: 500,
-      error: 'Not found',
+      error: 'User not found',
     });
   }
 });
