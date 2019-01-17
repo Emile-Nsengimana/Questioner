@@ -30,7 +30,7 @@ describe('Questions endpoints test', () => {
 
   describe('Posting a question record', () => {
     it('it should post a question record', () => {
-      const mt = {
+      /* const mt = {
         id: 2,
         createdOn: '2019-01-20',
         createdBy: 1,
@@ -38,7 +38,7 @@ describe('Questions endpoints test', () => {
         title: 'What',
         body: '?',
         votes: 1,
-      };
+      }; */
       request(app)
         .post('/questions')
         .expect('Content-Type', /json/)

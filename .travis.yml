@@ -5,3 +5,7 @@ node_js:
 
   script:
     -npm test
+jobs:
+  - stage: Produce Coverage
+    node_js: node_js
+    script: jest --forceExit --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls.js/bin/coveralls.js && rm -rf ./coverage

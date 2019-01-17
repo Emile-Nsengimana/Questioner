@@ -30,12 +30,6 @@ describe('Rsvp endpoints test', () => {
 
   describe('Posting a Rsvp record', () => {
     it('it should post a Rsvp record', () => {
-      const mt = {
-        id: 1,
-        meetup: 1,
-        user: 1,
-        response: 'yes',
-      };
       request(app)
         .post('/rsvp')
         .expect('Content-Type', /json/)

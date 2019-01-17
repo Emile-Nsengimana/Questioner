@@ -30,7 +30,7 @@ describe('Meetup endpoints test', () => {
 
   describe('Posting a meetup record', () => {
     it('it should post a meetup record', () => {
-      const mt = {
+      /* const mt = {
         id: 1,
         createdOn: '2019-01-15',
         location: 'Kicukiro',
@@ -38,7 +38,7 @@ describe('Meetup endpoints test', () => {
         happeningOn: '2019-03-10',
         topic: 'CYBERSTAR COMPETITION',
         tags: 'Is it this?',
-      };
+      }; */
       request(app)
         .post('/meetups')
         .expect('Content-Type', /json/)
