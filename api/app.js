@@ -1,10 +1,10 @@
-const express = require('express');
+import express from 'express';
+import bodyParser from 'body-parser';
+import meetups from './v1/meetups';
+import querys from './v1/questions';
+import rsvp from './v1/rsvp';
 
 const app = express();
-const bodyParser = require('body-parser');
-const meetups = require('./v1/meetups');
-const querys = require('./v1/questions');
-const rsvp = require('./v1/rsvp');
 
 app.use(bodyParser.json());
 app.use('/api/v1/meetups', meetups);
