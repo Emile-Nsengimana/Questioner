@@ -1,62 +1,44 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-import chai from 'chai';
-import chaiHttp from 'chai-http';
-import app from '../api/v1/meetups';
+
+const assert = require('assert');
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+
+const request = require('supertest');
+const app = require('../api/v1/meetups');
 
 chai.use(chaiHttp);
 chai.should();
 
-
-describe('meetups.js should be: ', () => {
-  it('return all meetup records', (done) => {
-    chai.request(app)
+describe('Meetup endpoints test', () => {
+  it('Records are successfully returned', () => {
+    request(app)
       .get('/meetups')
-      .end((err, res) => {
-        res.body.should.be.a('object');
-        res.body.should.have.property('status').eql(200);
-        res.body.should.have.property('data');
-        res.body.data.should.be.a('json');
-        done();
-      });
+      .expect('Content-Type', /json/)
+      .expect(200);
   });
-  it('return a specified meetup record', () => {
+
+
+  it('a specific meetup record is returned', () => {
     const topic = 1;
     chai.request(app)
-      .get(`/meetups/${topic}`)
-      .end((err, res) => {
-        res.body.should.be.a('object');
-        res.body.should.have.property('status').eql(200);
-        res.body.should.have.property('data');
-        res.body.data.should.be.a('json');
-        err.body.should.a('object');
-        err.body.should.have.property('status').eql(500);
-        err.body.should.have.property('error');
-      });
+      .get(`/meetups/${topic}`);
+  });
+
+  it('it should post a meetup record', () => {
+    /* const mt = {
+        id: 1,
+        createdOn: '2019-01-15',
+        location: 'Kicukiro',
+        images: '../img/mypic.jpg',
+        happeningOn: '2019-03-10',
+        topic: 'CYBERSTAR COMPETITION',
+        tags: 'Is it this?',
+      }; */
+    request(app)
+      .post('/meetups')
+      .expect('Content-Type', /json/)
+      .expect(200);
   });
 });
-
-it('post a meetup record', () => {
-  chai.request(app)
-    .post('/meetups')
-    .send(record)
-    .end((err, res) => {
-      res.body.should.be.a('object');
-      res.body.should.have.property('status').eql(200);
-      res.body.should.have.property('data');
-      res.body.data.should.be.a('array');
-    });
-});
-
-/* 
-  
-
-  describe('Posting a meetup record', () => {
-    it('it should post a meetup record', () => {
-      request(app)
-        .post('/meetups')
-        .expect('Content-Type', /json/)
-        .expect(200);
-    });
-  });
-});
-*/
