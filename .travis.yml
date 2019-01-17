@@ -1,11 +1,9 @@
-language: node_js
+ language: node_js
+ node_js:
+  - "10.15.0"
+ script : echo "Running tests..."
 
-node_js:
-  -"lts/*"
-
-  script:-npm test
-
-jobs:
+ jobs:
   - stage: Produce Coverage
     node_js: node_js
     script: jest --forceExit --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls.js/bin/coveralls.js && rm -rf ./coverage
