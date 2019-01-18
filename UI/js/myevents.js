@@ -1,12 +1,13 @@
-let modal = document.getElementById('simpleModal');
-let modalBtn = document.getElementById('query');
-let cls = document.getElementById('cls');
+/* eslint-disable no-undef */
+const modal = document.getElementById('simpleModal');
+const modalBtn = document.getElementById('query');
+const cls = document.getElementById('cls');
 
-modalBtn.addEventListener('click',openModal);
+modalBtn.addEventListener('click', () => {
+  modal.style.display = 'block';
+});
 
-function openModal(){
-	modal.style.display = 'block';
-}
+
 cls.addEventListener('click', () => {
-	modal.style.display = 'none';
+  modal.style.display = 'none';
 });
