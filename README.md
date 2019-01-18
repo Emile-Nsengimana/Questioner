@@ -10,7 +10,7 @@ or bottom of the log.
 
 ### API Endpoints
 
-| END POINTS                            | METHODS                        | FOR                             |
+| END POINTS                            | METHODS                        |:- FOR                             |
 | /api/v1/meetups                       | GET                            | retrive all records for meetups |
 | /api/v1/meetups/:topic                | GET                            | retrieving a specified meetup   |
 | /api/v1/meetups                       | POST                           | posting a meetup                |
