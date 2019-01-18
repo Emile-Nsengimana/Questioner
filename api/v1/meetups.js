@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 
 const router = express.Router();
 
@@ -35,7 +35,7 @@ const meetups = [
 
 
 router.get('/', (req, res) => {
-  res.status(200).json({
+  res.status(200).send({
     status: 200,
     data: meetups,
   });
@@ -44,12 +44,12 @@ router.get('/', (req, res) => {
 router.get('/:topic', (req, res) => {
   const meetup = meetups.find(c => c.topic === req.params.topic);
   if (meetup) {
-    res.status(200).json({
+    res.status(200).send({
       status: 200,
       data: meetup,
     });
   } else {
-    res.status(500).json({
+    res.status(500).send({
       status: 500,
       data: 'Not found',
     });
@@ -58,7 +58,7 @@ router.get('/:topic', (req, res) => {
 
 router.post('/', (req, res) => {
   if (!req.body) {
-    res.status(404).json({
+    res.status(404).send({
       status: 404,
       error: 'missing body contents',
     });
@@ -79,5 +79,4 @@ router.post('/', (req, res) => {
     });
   }
 });
-
 module.exports = router;

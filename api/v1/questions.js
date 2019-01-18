@@ -50,6 +50,25 @@ router.patch('/:id/upvote', (req, res) => {
   }
 });
 
+router.post('/', (req, res) => {
+  const addQuery = [
+    {
+      id: questions.length + 1,
+      createdOn: req.body.createdOn,
+      createdBy: req.body.createdBy,
+      meetup: req.body.meetup,
+      title: req.body.title,
+      body: req.body.body,
+      votes: req.body.votes,
+    },
+  ];
+  questions.push(addQuery);
+  res.status(200).json({
+    status: 200,
+    data: addQuery,
+  });
+});
+
 router.patch('/:id/downvote', (req, res) => {
   const qry = questions.find(c => c.id === parseInt(req.params.id, 10));
   if (!qry) {

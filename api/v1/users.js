@@ -20,7 +20,7 @@ const users = [
     othername: 'Sano',
     email: 'sano@gmail.com',
     phoneNumber: '0782057791',
-    username: 'shemasano',
+    username: 'Cedro',
     registered: '2018-01-17',
     isAdmin: 'yes',
   },
@@ -35,17 +35,29 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  const usr = users.find(c => c.topic === parseInt(req.params.id, 10));
-  if (usr) {
+  const userId = users.find(c => c.id === parseInt(req.params.id, 10));
+  if (userId) {
     res.status(200).json({
       status: 200,
-      data: usr,
+      data: userId,
     });
   } else {
-    res.status(500).json({
-      status: 500,
+    res.status(404).json({
+      status: 404,
       error: 'User not found',
     });
+  }
+});
+
+router.delete('/:id', (req, res) => {
+  const id = users.find(c => c.id === req.params.id);
+  if (!id) {
+    res.status(404).json({
+      status: 404,
+      data: 'Not found',
+    });
+  } else {
+    users.pop(id);
   }
 });
 

@@ -12,34 +12,24 @@ chai.use(chaiHttp);
 chai.should();
 
 describe('Rsvp endpoints test', () => {
-  describe('All Rsvp records should be returned', () => {
-    it('All records are successfully returned', () => {
-      request(app)
-        .get('/rsvp')
-        .expect('Content-Type', /json/)
-        .expect(200);
-    });
-  });
-  describe('All user Rsvp should be returned', () => {
-    it('A specific question is returned', () => {
-      const usr = 1;
-      chai.request(app)
-        .get(`/rsvp/${usr}`);
-    });
+
+  it('All records are successfully returned', () => {
+    request(app)
+      .get('/rsvp')
+      .expect('Content-Type', /json/)
+      .expect(200);
   });
 
-  describe('Posting a Rsvp record', () => {
-    it('it should post a Rsvp record', () => {
-      const mt = {
-        id: 1,
-        meetup: 1,
-        user: 1,
-        response: 'yes',
-      };
-      request(app)
-        .post('/rsvp')
-        .expect('Content-Type', /json/)
-        .expect(200);
-    });
+  it('A specific question is returned', () => {
+    const usr = 1;
+    chai.request(app)
+      .get(`/rsvp/${usr}`);
+  });
+
+  it('it should post a Rsvp record', () => {
+    request(app)
+      .post('/rsvp')
+      .expect('Content-Type', /json/)
+      .expect(200);
   });
 });

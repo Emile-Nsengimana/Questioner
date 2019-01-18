@@ -17,7 +17,7 @@ const rsvs = [
   },
   {
     id: 3,
-    meetup: 1,
+    meetup: 2,
     user: 1,
     response: 'no',
   },
