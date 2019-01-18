@@ -10,19 +10,19 @@ or bottom of the log.
 
 ### API Endpoints
 
-| end points | methods | for |
-| /api/v1/meetups | GET | retrive all records for meetups |
-| /api/v1/meetups/:topic | GET | retrieving a specified meetup |
-| /api/v1/meetups | POST | posting a meetup |
-| /api/v1/question | GET | retrieving all questions record |
-| /api/v1/question/:id/upvote | PATCH | up-voting a specified question |
-| /api/v1/question/:id/downvote | PATCH | up-voting a specified question |
-| /api/v1/rsvp | GET | retrieving all rsvp records |
-| /api/v1/rsvp/:userId | GET | retrieving all rsvp records for a specific user |
-| /api/v1/RSVP | POST | posting rsvp for a meetup |
-| /api/v1/users | GET | retrieving records for users |
-| /api/v1/users/:id | GET | retrieve a specified meetup |
-| /api/v1/users | POST | post a user |
+| END POINTS                            | METHODS                        | FOR                             |
+| /api/v1/meetups                       | GET                            | retrive all records for meetups |
+| /api/v1/meetups/:topic                | GET                            | retrieving a specified meetup   |
+| /api/v1/meetups                       | POST                           | posting a meetup                |
+| /api/v1/question                      | GET                            | retrieving all questions record |
+| /api/v1/question/:id/upvote           | PATCH                          | up-voting a specified question  |
+| /api/v1/question/:id/downvote         | PATCH                          | up-voting a specified question  |
+| /api/v1/rsvp                          | GET                            | retrieving all rsvp records     |
+| /api/v1/rsvp/:userId                  | GET                            | retrieving all rsvp records     |
+| /api/v1/RSVP                          | POST                           | posting rsvp for a meetup       |
+| /api/v1/users                         | GET                            | retrieving records for users    |
+| /api/v1/users/:id                     | GET                            | retrieve a specified meetup     |
+| /api/v1/users                         | POST                           | post a user                     |
 
 
 ### This can be tested using postman
