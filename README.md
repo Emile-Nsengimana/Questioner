@@ -8,7 +8,7 @@ or bottom of the log.
    * Rsvp for a meetup
    * Upvote or downvote a question
 
-### This can be tested using postman
+### APIs can be tested using postman
 
 
 ### This can be tested using postman
