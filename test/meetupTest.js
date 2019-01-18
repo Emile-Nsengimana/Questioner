@@ -3,13 +3,9 @@
 
 const assert = require('assert');
 const chai = require('chai');
-const chaiHttp = require('chai-http');
 
 const request = require('supertest');
 const app = require('../api/v1/meetups');
-
-chai.use(chaiHttp);
-chai.should();
 
 describe('Meetup endpoints test', () => {
   it('Records are successfully returned', () => {
