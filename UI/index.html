@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sign in</title>
+	</head>
+		<meta name="viewport" content="width=device-width">
+		<meta name="decription" content="Andela developer challenge">
+		<meta name="author" content="NSENGIMANA Emile">
+		<title>Sign in</title>
+		<link rel="stylesheet" type="text/css" href="./css/login.css">
+	<body>
+		<header>
+			<div class="container">
+				<div id="logo">
+					<span class="stressthis"><h1>Questioner</h1></span>
+				</div>				
+			</div>		
+		</header><br><br>
+		<section >
+			<h2 id="lg">Login</h2>
+			<div id="login">
+				
+				<label for="Username">Username:</label><br><input type="text" name="username" placeholder="username..."><br><br>
+				<label for="Password">Password:</label><br><input type="password" name="password"><br><br>
+				<button id="neza">Sign in</button><br><br>
+				<h5 >Don't have an account?<a href="signup.html">Sign up</a></h5>
+				<h5 >Admin login <a href="adminlogin.html">Admin</a></h5>
+			
+			</div>
+
+		</section>		
+	<script type="text/javascript">
+		let btn = document.getElementById('neza');
+		btn.addEventListener('click',function(){
+			location.href = 'myhome.html';
+		});
+	</script>
+	</body>
+	<footer>
+		<h3>Andela developer challenge, Copy right &copy; 2018</h3>
+	</footer>
+</html>
